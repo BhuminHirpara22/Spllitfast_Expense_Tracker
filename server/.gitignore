@@ -1,0 +1,7 @@
+/node_modules
+
+{
+  "files.exclude": {
+    "**/.env": true
+  }
+}
