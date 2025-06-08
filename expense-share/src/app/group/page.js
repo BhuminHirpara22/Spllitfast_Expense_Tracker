@@ -37,7 +37,7 @@ export default function GroupPage() {
     setRoomName(storedRoomName);
     
     // Connect to socket server
-    const socketInstance = io('https://splitfast-expense-splitter.onrender.com');
+    const socketInstance = io(process.env.NEXT_PUBLIC_API_URL);
     setSocket(socketInstance);
     
     socketInstance.on('connect', () => {

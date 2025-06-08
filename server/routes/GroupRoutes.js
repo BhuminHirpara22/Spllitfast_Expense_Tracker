@@ -80,7 +80,7 @@ const setupSocketRoutes = (io) => {
                     group.expenses.push({
                         userName: socket.userName,
                         description: description,
-                        expense: mongoose.Types.Decimal128.fromString(amount)
+                        expense: mongoose.Types.Decimal128.fromString(String(amount))
                     });
 
                     // Adding the new message to the group's messages array

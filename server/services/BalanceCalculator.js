@@ -4,21 +4,22 @@ function calculateNetBalances(expenses, participants) {
     
     // Calculate the total payment from all expenses
     expenses.forEach((expense) => {
-        const { expense: amount } = expense;
+        let amount = expense.expense;
+        if (typeof amount === 'object' && amount !== null && amount.toString) {
+            amount = amount.toString();
+        }
         totalPayment += parseFloat(amount);
     });
-    
-    // Calculate the per person share of the total expenses
-    let perPerson = totalPayment / participants.length;
-    
-    // Initialize each participant's balance with their share of the total expenses as a negative value
+    // ...existing code...
     participants.forEach((participant) => {
         balances[participant] = 0 - parseFloat(perPerson);
     });
-    
-    // Adjust each participant's balance based on the expenses they paid
     expenses.forEach(expense => {
-        const { userName: payer, expense: amount } = expense;
+        const { userName: payer } = expense;
+        let amount = expense.expense;
+        if (typeof amount === 'object' && amount !== null && amount.toString) {
+            amount = amount.toString();
+        }
         balances[payer] += parseFloat(amount);
     });
 
