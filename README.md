@@ -1,38 +1,42 @@
 # SplitFast
 
+[**Live Demo**](https://spllitfast-expense-tracker.vercel.app/)
+
 ## Overview
 SplitFast is a web application that helps users manage shared expenses within groups. This project includes both the backend for handling group creation, user management, and transaction calculations, as well as the frontend for user interaction and experience.
 
 ## Repository Structure
 ```
-SplitFast_Expense_Splitter/
+```
+SplitFast_Expense_Tracker/
 ├── server/
 │   ├── models/
 │   │   └── GroupModel.js
 │   ├── routes/
 │   │   └── GroupRoutes.js
 │   ├── services/
-│   │   └── Transaction.js
-│   │   └── TransactionCalculator.js
+│   │   ├── Transaction.js
+│   │   ├── TransactionCalculator.js
 │   │   └── BalanceCalculator.js
 │   ├── server.js
 │   └── package.json
-expense-share/
-├── src/
-│   ├── app/
-│   │   ├── page.js           (Home page)
-│   │   ├── layout.js         (Root layout)
-│   │   ├── group/
-│   │   │   └── page.js       (Group page)
+├── expense-share/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── page.js           # Home page
+│   │   │   ├── layout.js         # Root layout
+│   │   │   └── group/
+│   │   │       └── page.js       # Group page
+│   │   ├── components/
+│   │   │   ├── MessageList.js
+│   │   │   ├── ExpenseForm.js
+│   │   │   ├── TransactionList.js
+│   │   │   └── ParticipantList.js
 │   │   └── globals.css
-│   └── components/
-│       ├── MessageList.js
-│       ├── ExpenseForm.js
-│       ├── TransactionList.js
-│       └── ParticipantList.js
-├── tailwind.config.js
-├── next.config.js
-└── package.json
+│   ├── tailwind.config.js
+│   ├── next.config.js
+│   └── package.json
+```
 ```
 
 - **models/**: Database schemas and models.
@@ -44,35 +48,35 @@ expense-share/
 
 ## Setting Up the Development Environment
 1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/BhuminHirpara22/Splitfast_Expense_Splitter.git
-   cd Splitfast_Expense_Splitter
-   ```
+    ```bash
+    git clone https://github.com/BhuminHirpara22/Spllitfast_Expense_Tracker
+    cd Splitfast_Expense_Tracker
+    ```
 
 2. **Install Dependencies**
-    1. **Backend**
-    ```bash
-    cd server
-    npm install
-    sudo systemctl start mongod
-    ```
-    2. **Frontend**
-    ```bash
-    cd expense-share
-    npm install
-    ```
+     1. **Backend**
+     ```bash
+     cd server
+     npm install
+     sudo systemctl start mongod
+     ```
+     2. **Frontend**
+     ```bash
+     cd expense-share
+     npm install
+     ```
 
 3. **Run the server**
-    1. **Backend**
-    ```bash
-    cd server
-    npm start
-    ```
-    1. **Frontend**
-    ```bash
-    cd expense-share
-    npm run dev
-    ```
+     1. **Backend**
+     ```bash
+     cd server
+     npm start
+     ```
+     1. **Frontend**
+     ```bash
+     cd expense-share
+     npm run dev
+     ```
 
 # Using the Application
 
@@ -95,3 +99,4 @@ expense-share/
 ## Leaving a Group
 1. Simply disconnect from the group when you are done.
 2. Your transactions will still be stored for future reference.
+
