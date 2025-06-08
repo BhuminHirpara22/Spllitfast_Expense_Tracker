@@ -7,7 +7,6 @@ SplitFast is a web application that helps users manage shared expenses within gr
 
 ## Repository Structure
 ```
-```
 SplitFast_Expense_Tracker/
 ├── server/
 │   ├── models/
@@ -36,7 +35,6 @@ SplitFast_Expense_Tracker/
 │   ├── tailwind.config.js
 │   ├── next.config.js
 │   └── package.json
-```
 ```
 
 - **models/**: Database schemas and models.
